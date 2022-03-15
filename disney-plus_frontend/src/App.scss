@@ -1,0 +1,378 @@
+/* ---------------------- NAVIGATION BAR --------------------------- */
+.Nav {
+  height: 70px;
+  background: #090b13;
+  display: flex;
+  align-items: center;
+  padding: 0 36px;
+  overflow-x: hidden;
+}
+
+.logo {
+  width: 80px;
+}
+
+.navMenu {
+  display: flex;
+  flex: 1;
+  margin-left: 40px;
+  align-items: center;
+}
+
+.navMenu a {
+  display: flex;
+  color: whitesmoke;
+  text-decoration: none;
+  align-items: center;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.navMenu img {
+  height: 20px;
+}
+
+.navMenu span {
+  font-size: 13px;
+  letter-spacing: 1.42px;
+  position: relative;
+}
+
+.navMenu span:after {
+  content: "";
+  height: 2px;
+  background: turquoise;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+
+.navMenu span:hover::after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+.userimg {
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ---------------------- HOME PAGE --------------------------- */
+.main {
+  min-height: calc(100vh - 70px);
+  padding: 0 calc(3.5vw + 5px);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.main::before {
+  background: url("../public/images/home-background.png") center center / cover
+    no-repeat fixed;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1; /* image always be behind the content */
+}
+
+/* ---------------------- HOME PAGE - IMGSLIDER --------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+.carousel {
+  margin-top: 20px;
+
+  .slick-list {
+    overflow: visible;
+  }
+
+  ul li button {
+    &:before {
+      font-size: 10px;
+      color: rgb(150, 158, 171);
+    }
+  }
+
+  button {
+    z-index: 1;
+  }
+}
+
+.wrap {
+  cursor: pointer;
+
+  img {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+      rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    transition-duration: 300ms;
+
+    &:hover {
+      border: 1px solid aliceblue;
+    }
+  }
+}
+
+/* ---------------------- HOME PAGE - MOVIES & SHOWS VIEW --------------------------- */
+
+.container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 25px;
+  padding: 30px 0px 26px;
+}
+
+.wrap-view {
+  border: 1px solid rgb(249, 249, 249, 0.1);
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  transition: transform 250ms ease-in-out;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: lightgray;
+    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
+      rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+  }
+}
+
+.movies-container {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 25px;
+    .wrap-content {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgb(249, 249, 249, 0.1);
+      box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+        rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+      transition: transform 250ms ease-in-out;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &:hover {
+        transform: scale(1.05);
+        border-color: lightgray;
+        box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
+          rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+      }
+    }
+  }
+}
+
+/* ---------------------- DETAIL PAGE --------------------------- */
+
+.detailContainer {
+  min-height: calc(100vh - 70px);
+  padding: 0 calc(3.5vw + 5px);
+  position: relative;
+  // overflow-x: hidden;
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.8;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .imageTitle {
+    height: 30vh;
+    width: 35vw;
+    min-width: 200px;
+    min-height: 170px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    .play {
+      display: flex;
+      align-items: center;
+      background: rgba(245, 245, 245, 0.884);
+      color: black;
+      // width: 70px;
+      height: 45px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 5px;
+      padding: 0 15px;
+      margin-right: 12px;
+      letter-spacing: 1.8px;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+      }
+      &:hover {
+        background-color: gray;
+      }
+    }
+    .trailer {
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      border: 2px solid gray;
+      display: flex;
+      align-items: center;
+    }
+    .add {
+      width: 31px;
+      height: 31px;
+      justify-content: center;
+      background-color: rgb(0, 0, 0, 0.6);
+      border: 2px solid white;
+      border-radius: 25px;
+      padding-bottom: 3px;
+      cursor: pointer;
+      margin-right: 12px;
+
+      span {
+        font-size: 30px;
+      }
+      &:hover {
+        background-color: gray;
+      }
+    }
+    .group-watch {
+      width: 31px;
+      height: 31px;
+      justify-content: center;
+      background-color: black;
+      border: 2px solid white;
+      border-radius: 25px;
+      padding-bottom: 2px;
+      cursor: pointer;
+      img {
+        width: 25px;
+      }
+      &:hover {
+        background-color: gray;
+      }
+    }
+  }
+
+  .subtitle {
+    margin: 15px 3px;
+    font-size: 15px;
+  }
+
+  .description {
+    width: 35em;
+    font-size: 15px;
+    line-height: 1.4;
+  }
+}
+
+/* ---------------------- LOGIN PAGE --------------------------- */
+
+.login-container {
+  position: relative;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+
+  &:before {
+    background: url("../public/images/login-background.jpg") center center /
+      cover no-repeat fixed;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .login-content {
+    max-width: 600px;
+    padding: 70px 30px;
+    width: 65%;
+    margin-top: 35px;
+  }
+
+  .signup {
+    display: flex;
+    justify-content: center;
+    background-color: #0066cc;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 250ms;
+    letter-spacing: 1.3px;
+
+    &:hover {
+      background-color: #0080ff;
+    }
+  }
+  .img2 {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+// .carousel .slick-list {
+//   overflow: visible;
+// }
+
+// .carousel ul li button::before {
+//   font-size: 10px;
+//   color: rgb(150, 158, 171);
+// }
+
+// .carousel button {
+//   z-index: 1;
+// }
+
+// .wrap img {
+//   border: 4px solid transparent;
+//   border-radius: 4px;
+//   width: 100%;
+//   height: 100%;
+//   box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+//     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+//   transition-duration: 300ms;
+// }
+// .wrap img:hover {
+//   border: 4px solid aliceblue;
+// }
