@@ -3,7 +3,6 @@ import ImgSlider from "./ImgSlider";
 import Viewers from "./Viewers";
 import Movies from "./Movies";
 
-// Install firebase and firebase-tools packages from npm.
 
 function Home() {
   const [movies, setMovies] = useState([]);
