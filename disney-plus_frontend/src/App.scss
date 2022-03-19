@@ -1,3 +1,7 @@
+// body {
+//   overflow-wrap: normal;
+// }
+
 /* ---------------------- NAVIGATION BAR --------------------------- */
 .Nav {
   height: 70px;
@@ -164,6 +168,7 @@
     grid-gap: 25px;
     .wrap-content {
       border-radius: 10px;
+      margin-bottom: 15px;
       overflow: hidden;
       border: 1px solid rgb(249, 249, 249, 0.1);
       box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
@@ -191,7 +196,7 @@
   min-height: calc(100vh - 70px);
   padding: 0 calc(3.5vw + 5px);
   position: relative;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   .background {
     position: fixed;
     top: 0;
