@@ -16,9 +16,8 @@ from DisneyApp.models import Movie
 @api_view(['GET'])
 def getRoutes(request):
     routes = [
-        {'GET': '/api/projects'},
-        {'GET': '/api/projects/id'},
-        {'POST': '/api/projects'}
+        {'GET': '/getmovies'},
+        {'GET': '/getmovies/title'},
     ]
     return Response(routes)
 
@@ -27,4 +26,11 @@ def getRoutes(request):
 def getMovies(request):
     movies = Movie.objects.all()
     serializer = MovieSeriallizer(movies, many=True)
+    return Response(serializer.data)
+
+
+@api_view(['GET'])
+def getMovie(request, title):
+    movie = Movie.objects.get(title=title)
+    serializer = MovieSeriallizer(movie)
     return Response(serializer.data)
