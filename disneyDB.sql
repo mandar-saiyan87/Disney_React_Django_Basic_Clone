@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 15, 2022 at 09:07 AM
+-- Generation Time: Mar 19, 2022 at 09:00 AM
 -- Server version: 8.0.28-0ubuntu0.21.10.3
 -- PHP Version: 8.0.8
 
@@ -116,7 +116,7 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$320000$tLWpqOgIxQstLVucCFRGRL$qlK/ZYFuXBtNJuTeZ5vXVPlPGA37jtIpjkfJ7Ir/+xw=', '2022-02-28 10:02:01.338775', 1, 'admin', '', '', '', 1, 1, '2022-02-27 07:22:10.505883');
+(1, 'pbkdf2_sha256$320000$tLWpqOgIxQstLVucCFRGRL$qlK/ZYFuXBtNJuTeZ5vXVPlPGA37jtIpjkfJ7Ir/+xw=', '2022-03-18 12:02:55.495744', 1, 'admin', '', '', '', 1, 1, '2022-02-27 07:22:10.505883');
 
 -- --------------------------------------------------------
 
@@ -310,6 +310,8 @@ CREATE TABLE `django_session` (
 
 INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
 ('718dtfwyymdt0y539v9r9lrb1ogh3s4r', '.eJxVjEsOwjAMBe-SNYoCcdyYJfueIbJjQwuolfpZIe4OlbqA7ZuZ93KF16Ur62xT6dWd3dEdfjfh-rBhA3rn4Tb6Og7L1IvfFL_T2bej2vOyu38HHc_dtzYi4CQgeg1Wgwk2gRBAIQvnSpSaEBERMCowJUucI0oiCaHJdnLvD-RON1w:1nOcqv:aRSzIs7WY9SfKig6cbf8B0K4sjCELwvRwNTjfjJ7deI', '2022-03-14 10:02:01.940192'),
+('artiib3552aspp0bbm8vpqa39wp2box9', '.eJxVjEsOwjAMBe-SNYoCcdyYJfueIbJjQwuolfpZIe4OlbqA7ZuZ93KF16Ur62xT6dWd3dEdfjfh-rBhA3rn4Tb6Og7L1IvfFL_T2bej2vOyu38HHc_dtzYi4CQgeg1Wgwk2gRBAIQvnSpSaEBERMCowJUucI0oiCaHJdnLvD-RON1w:1nVBJn:2zPNQY2qOLEIu94Nj35hg85UZGMFYptHWh-mts9HVU8', '2022-04-01 12:02:55.780745'),
+('l8s55frt7cbygbn1d8x6z93f86rd20u4', '.eJxVjEsOwjAMBe-SNYoCcdyYJfueIbJjQwuolfpZIe4OlbqA7ZuZ93KF16Ur62xT6dWd3dEdfjfh-rBhA3rn4Tb6Og7L1IvfFL_T2bej2vOyu38HHc_dtzYi4CQgeg1Wgwk2gRBAIQvnSpSaEBERMCowJUucI0oiCaHJdnLvD-RON1w:1nTy92:z04xrekTlDqzoD0C8Z0Etl2EWaWt9Y1jSku5s0Djzxw', '2022-03-29 03:46:48.850970'),
 ('nkn5afk28tn2a9z1p3eoxx2foict6bzc', '.eJxVjEsOwjAMBe-SNYoCcdyYJfueIbJjQwuolfpZIe4OlbqA7ZuZ93KF16Ur62xT6dWd3dEdfjfh-rBhA3rn4Tb6Og7L1IvfFL_T2bej2vOyu38HHc_dtzYi4CQgeg1Wgwk2gRBAIQvnSpSaEBERMCowJUucI0oiCaHJdnLvD-RON1w:1nOWUT:OWfpEw1MJIAUP5MzptMTnOPsb8AokRikAC24Th0eePs', '2022-03-14 03:14:25.408981'),
 ('zl8ymlgyst629j473bp7xdzpn15kyhuh', '.eJxVjEsOwjAMBe-SNYoCcdyYJfueIbJjQwuolfpZIe4OlbqA7ZuZ93KF16Ur62xT6dWd3dEdfjfh-rBhA3rn4Tb6Og7L1IvfFL_T2bej2vOyu38HHc_dtzYi4CQgeg1Wgwk2gRBAIQvnSpSaEBERMCowJUucI0oiCaHJdnLvD-RON1w:1nOI0O:8XLj3DXacj7jNkpiUC1k_L5qlPuWN0s026pFOnSE_FQ', '2022-03-13 11:46:24.748681');
 
