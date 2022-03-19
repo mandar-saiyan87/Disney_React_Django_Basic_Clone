@@ -12,7 +12,7 @@ function Movies({ allmovies }) {
             const { id, cardImg, title } = item;
             return (
               <div className="wrap-content" key={id}>
-                <Link to="/detail" state={{ data: item }}>
+                <Link to={`/detail/${title}`}>
                   <img src={`/images/recommended/${cardImg}`} alt={title} />
                 </Link>
               </div>
@@ -85,3 +85,5 @@ export default Movies;
 //     </div>
 //   </div>
 // </>
+
+// state={{ data: item }}
