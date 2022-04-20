@@ -4,8 +4,8 @@ Django Admin<br>
 username: admin<br>
 password: admindisney123<br><br>
 
-
-** Partially guided tutorial.
-** Code refactoting required.
+**Incomplete <br/>
+** Partially guided tutorial.<br/>
+** Code refactoting required.<br/>
 ** Login & Authentication functionality pending will add soon<br>
 ** Maybe will include or will recreate this app with redux and instead of using Python Django will use express.js and mongodb<br>
