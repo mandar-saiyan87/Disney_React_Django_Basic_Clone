@@ -4,7 +4,7 @@ Django Admin<br>
 username: admin<br>
 password: admindisney123<br><br>
 
-**Incomplete <br/>
+** In progress <br/>
 ** Partially guided tutorial.<br/>
 ** Code refactoting required.<br/>
 ** Login & Authentication functionality pending will add soon<br>
